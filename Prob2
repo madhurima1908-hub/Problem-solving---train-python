@@ -1,6 +1,0 @@
-Find the minimum number of arrows to bust balloons. Given a set of balloons each
-represented by a range start, end file the minimum number of arrows required to bust all 
-the ballons. An arrow can burst multiple ballons if they overlap.
-
-sample input: {{10, 16}, {2, 8}, {1, 6}, {7, 12}}
-sample output: minimum number of arrows to bust balloons = 2
