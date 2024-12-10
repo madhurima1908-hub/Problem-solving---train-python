@@ -1,5 +1,13 @@
-Find the minimum number of arrows to bust balloons. Given a set of balloons each represented by a range start, end file the minimum number of arrows required to bust all the ballons. An arrow can burst multiple ballons if they overlap.
-
- {{10, 16}, {2, 8}, {1, 6}, {7, 12}}
-
-sample output: minimum number of arrows to bust balloons = 2
+def findMinArrow(points):
+    points.sort()
+    maxVal = 0
+    lastVal = float('-inf')
+    for p in points:
+        if lastVal < p[0]:
+            lastVal = p[1]
+            maxVal += 1
+        else:
+            lastVal = min(lastVal, p[1])
+    return maxVal
+points = [[10, 16], [2, 8], [1, 6], [7, 12]]
+print(findMinArrow(points))
