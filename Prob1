@@ -1,0 +1,27 @@
+def findPlatform(arr, dep, n):
+
+    arr.sort()
+    dep.sort()
+    platform = 1
+    r = 1
+    x = 1
+    y = 0
+    while (x < n and y < n):
+        if (arr[x] <= dep[y]):
+            platform += 1
+            x += 1
+        elif (arr[x] > dep[y]):
+            platform -= 1
+            y += 1
+        if (platform > r):
+            r = platform
+    return r
+arr = [900, 940, 950, 1100, 1500, 1800]
+dep = [910, 1200, 1120, 1130, 1900, 2000]
+n = len(arr)
+print(findPlatform(arr, dep, n))
+
+
+
+
+
